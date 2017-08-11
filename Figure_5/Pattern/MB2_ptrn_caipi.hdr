@@ -1,0 +1,8 @@
+# Dimensions
+1 192 1 1 1 1 1 1 1 1 1 1 1 2 1 1 
+# Command
+slice 0 0 tmp MB2_ptrn_caipi 
+# Files
+ >MB2_ptrn_caipi <tmp
+# Creator
+BART v0.4.00-42-g39944c7

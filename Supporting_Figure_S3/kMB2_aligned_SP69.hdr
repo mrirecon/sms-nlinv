@@ -1,0 +1,8 @@
+# Dimensions
+384 69 1 16 1 1 1 1 1 1 1 1 1 2 1 1 
+# Command
+slice 10 1 kaM_tmp kMB2_aligned_SP69 
+# Files
+ >kMB2_aligned_SP69 <kaM_tmp
+# Creator
+BART v0.4.00-68-gbe63df5-dirty

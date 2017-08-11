@@ -1,0 +1,8 @@
+# Dimensions
+384 301 1 16 1 1 1 1 1 1 1 1 1 1 1 1 
+# Command
+slice 10 1 kmF_tmp kMB1_bottom_SP301 
+# Files
+ >kMB1_bottom_SP301 <kmF_tmp
+# Creator
+BART v0.4.00-68-gbe63df5

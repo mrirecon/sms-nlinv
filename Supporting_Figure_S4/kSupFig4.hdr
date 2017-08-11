@@ -1,0 +1,8 @@
+# Dimensions
+384 39 1 20 1 1 1 1 1 1 1 1 1 5 1 1 
+# Command
+slice 10 2 kt_tmp kFig6a 
+# Files
+ >kFig6a <kt_tmp
+# Creator
+BART v0.4.00-55-gd0b560a

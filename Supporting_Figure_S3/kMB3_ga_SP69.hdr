@@ -1,0 +1,8 @@
+# Dimensions
+384 69 1 16 1 1 1 1 1 1 1 1 1 3 1 1 
+# Command
+slice 10 1 kgM_tmp kMB3_ga_SP69 
+# Files
+ >kMB3_ga_SP69 <kgM_tmp
+# Creator
+BART v0.4.00-68-gbe63df5-dirty

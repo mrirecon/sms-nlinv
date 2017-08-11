@@ -1,0 +1,21 @@
+#!/bin/sh
+set -e
+####
+# Pattern
+####
+bart repmat 0 384 ./Pattern/MB2_ptrn_aligned ./Pattern/MB2_pattern_aligned
+
+####
+# SMS-NLINV
+####
+
+# Undersample
+bart fmac kMB2 ./Pattern/MB2_pattern_aligned k_usamp
+
+## SMS-NLINV reconstruction
+bart nlinv -H1 -S -i 10 -n1 k_usamp rec_MB2_Ali_tmp
+bart resize -c 0 192 rec_MB2_Ali_tmp MB2_aligned
+
+## Clean
+rm *tmp*.cfl k_*.cfl ./Pattern/MB2_pattern*.cfl
+rm *tmp*.hdr k_*.hdr ./Pattern/MB2_pattern*.hdr

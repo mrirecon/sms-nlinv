@@ -1,0 +1,8 @@
+# Dimensions
+384 192 1 20 1 1 1 1 1 2 1 1 1 1 1 1 
+# Command
+transpose 2 9 test test2 
+# Files
+ >test2 <test
+# Creator
+BART v0.3.01-208-g61d5f51

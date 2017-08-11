@@ -1,0 +1,8 @@
+# Dimensions
+384 192 2 20 1 1 1 1 1 1 1 1 1 1 1 1 
+# Command
+transpose 2 13 k_tmp k 
+# Files
+ >k <k_tmp
+# Creator
+BART v0.4.00-55-gd0b560a

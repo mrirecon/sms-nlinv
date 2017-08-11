@@ -1,0 +1,8 @@
+# Dimensions
+384 192 1 20 1 1 1 1 1 1 1 1 1 2 1 1 
+# Command
+twixread -A ./Raw/MB2_raw.dat k 
+# Files
+ >k
+# Creator
+BART v0.4.00-55-gd0b560a

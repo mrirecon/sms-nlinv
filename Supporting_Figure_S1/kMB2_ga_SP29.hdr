@@ -1,0 +1,8 @@
+# Dimensions
+384 29 1 16 1 1 1 1 1 1 1 1 1 2 1 1 
+# Command
+slice 10 1 kg_tmp kMB2_ga_SP29 
+# Files
+ >kMB2_ga_SP29 <kg_tmp
+# Creator
+BART v0.4.00-68-gbe63df5

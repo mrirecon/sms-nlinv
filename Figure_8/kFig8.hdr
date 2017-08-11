@@ -1,0 +1,8 @@
+# Dimensions
+320 35 1 26 1 1 1 1 1 1 1 1 1 2 1 1 
+# Command
+join 1 k85 k86 k87 k88 k89 kFig6b 
+# Files
+ >kFig6b <k89 <k88 <k87 <k86 <k85
+# Creator
+BART v0.4.00-55-gd0b560a
