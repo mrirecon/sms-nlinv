@@ -77,8 +77,8 @@ bart transpose 2 13 k k_NLINV
 bart transpose 2 13 k_usamp k_usamp_NLINV
 
 ## SMS-NLINV reconstruction
-bart nlinv -H1 -S -i 9 -n1 k_NLINV rec_SMSNLINV_full 
-bart nlinv -H1 -S -i 9 -n1 k_usamp_NLINV rec_SMSNLINV_usamp
+bart nlinv -H1 -S -i 9 k_NLINV rec_SMSNLINV_full
+bart nlinv -H1 -S -i 9 k_usamp_NLINV rec_SMSNLINV_usamp
 bart resize -c 0 192 rec_SMSNLINV_usamp rec_SMSNLINV_usamp_resize
 
 ## Difference image
