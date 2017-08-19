@@ -13,7 +13,7 @@ bart repmat 0 384 ./Pattern/MB2_ptrn_caipi ./Pattern/MB2_pattern_caipi
 bart fmac kMB2 ./Pattern/MB2_pattern_caipi k_usamp
 
 ## SMS-NLINV reconstruction
-bart nlinv -H1 -S -i 10 -n1 k_usamp rec_MB2_CAI_tmp
+bart nlinv -S -i 10 k_usamp rec_MB2_CAI_tmp
 bart resize -c 0 192 rec_MB2_CAI_tmp MB2_caipi
 
 ## Clean

@@ -11,12 +11,12 @@ set -e
 #bart estdelay trajf tmp2       # Result: -0.614225:-0.651670:-0.000881
 
 # 301 spokes
-bart traj -x 384 -y 301 -t 1 -m 1 -D1 -q -0.614225:-0.651670:-0.000881 trajF
+bart traj -x 384 -y 301 -t 1 -m 1 -D -q -0.614225:-0.651670:-0.000881 trajF
     # oversampling
 bart scale 2 trajF trajF_os
 
 # 29 spokes
-bart traj -x 384 -y 29 -t 1 -m 1 -D1 -q -0.614225:-0.651670:-0.000881 traj
+bart traj -x 384 -y 29 -t 1 -m 1 -D -q -0.614225:-0.651670:-0.000881 traj
     # oversampling
 bart scale 2 traj traj_os
 
@@ -71,14 +71,14 @@ bart scale 0.03448275862 psf_tmp psf
 # SMS-NLINV
 ###
 # 301 spokes 
-bart nlinv -H1 -f 0.5 -i 10 -n1 -p psfF km_gridF reco_m_tmpF
-bart nlinv -H1 -f 0.5 -i 10 -n1 -p psfF kp_gridF reco_p_tmpF
+bart nlinv -i 10 -p psfF km_gridF reco_m_tmpF
+bart nlinv -i 10 -p psfF kp_gridF reco_p_tmpF
 bart resize -c 0 192 1 192 reco_m_tmpF MB1_bottom_SP301
 bart resize -c 0 192 1 192 reco_p_tmpF MB1_top_SP301
 
 # 29 spokes 
-bart nlinv -H1 -f 0.5 -i 10 -n1 -p psf km_grid reco_m_tmp
-bart nlinv -H1 -f 0.5 -i 10 -n1 -p psf kp_grid reco_p_tmp
+bart nlinv -i 10 -p psf km_grid reco_m_tmp
+bart nlinv -i 10 -p psf kp_grid reco_p_tmp
 bart resize -c 0 192 1 192 reco_m_tmp MB1_bottom_SP29
 bart resize -c 0 192 1 192 reco_p_tmp MB1_top_SP29
 

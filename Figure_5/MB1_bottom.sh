@@ -13,7 +13,7 @@ bart repmat 0 384 ./Pattern/MB1_ptrn ./Pattern/MB1_pattern
 bart fmac kMB1_bottom ./Pattern/MB1_pattern k_usamp
 
 ## SMS-NLINV reconstruction
-bart nlinv -H1 -S -i 10 -n1 k_usamp rec_MB1_bottom_tmp
+bart nlinv -S -i 10 k_usamp rec_MB1_bottom_tmp
 bart resize -c 0 192 rec_MB1_bottom_tmp MB1_bottom
 
 ## Clean

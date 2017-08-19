@@ -7,7 +7,7 @@ set -e
 
 # Traj 
 
-bart traj -x 384 -y 39 -t 1 -m 5 -D1 -g trajt
+bart traj -x 384 -y 39 -t 1 -m 5 -D -g trajt
     # oversampling
 bart scale 2 trajt trajt_os
 
@@ -30,7 +30,7 @@ bart scale 0.02564102564 psft_tmp psft
 
 
 # SMS-NLINV
-DEBUG_LEVEL=5 bart nlinv -H1 -f0.5 -i 12 -n1 -p psft kt_grid reco_t_tmp sens_nlinv > Output.txt
+DEBUG_LEVEL=5 bart nlinv -i 12 -p psft kt_grid reco_t_tmp sens_nlinv > Output.txt
 
 bart resize -c 0 256 1 256 reco_t_tmp tmp_SupFig4_smsnlinv
 bart transpose 0 1 tmp_SupFig4_smsnlinv SupFig4_smsnlinv

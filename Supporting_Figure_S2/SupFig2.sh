@@ -6,13 +6,13 @@ set -e
 ###
 # 301 spokes
     # linear-turn
-bart traj -x 384 -y 301 -t 1 -m 3 -D1 -q -0.614225:-0.651670:-0.000881 trajtM
+bart traj -x 384 -y 301 -t 1 -m 3 -D -q -0.614225:-0.651670:-0.000881 trajtM
     # oversampling
 bart scale 2 trajtM trajtM_os
 
 # 29 spokes
     # linear-turn
-bart traj -x 384 -y 29 -t 1 -m 3 -D1 -q -0.614225:-0.651670:-0.000881 trajt
+bart traj -x 384 -y 29 -t 1 -m 3 -D -q -0.614225:-0.651670:-0.000881 trajt
     # oversampling
 bart scale 2 trajt trajt_os
 
@@ -60,11 +60,11 @@ bart scale 0.03448275862 psft_tmp psft
 # SMS-NLINV
 ###
 # 301 spokes
-bart nlinv -H1 -S -f 0.5 -i 10 -n1 -p psftM ktM_grid reco_tM_tmp
+bart nlinv -S -i 10 -p psftM ktM_grid reco_tM_tmp
 bart resize -c 0 192 1 192 reco_tM_tmp tmp_MB3_turn_SP301
 
 # 29 spokes
-bart nlinv -H1 -S -f 0.5 -i 10 -n1 -p psft kt_grid reco_t_tmp
+bart nlinv -S -i 10 -p psft kt_grid reco_t_tmp
 bart resize -c 0 192 1 192 reco_t_tmp MB3_turn_SP29
 
 ###

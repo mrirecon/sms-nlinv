@@ -6,17 +6,17 @@ set -e
 # Trajectory
 ###
     # aligned
-bart traj -x 384 -y 29 -t 1 -m 2 -l -D1 -q -0.614225:-0.651670:-0.000881 traja
+bart traj -x 384 -y 29 -t 1 -m 2 -l -D -q -0.614225:-0.651670:-0.000881 traja
     # oversampling
 bart scale 2 traja traja_os
 
     # turn-based
-bart traj -x 384 -y 29 -t 1 -m 2 -D1 -q -0.614225:-0.651670:-0.000881 trajt
+bart traj -x 384 -y 29 -t 1 -m 2 -D -q -0.614225:-0.651670:-0.000881 trajt
     # oversampling
 bart scale 2 trajt trajt_os
 
     # golden-angle
-bart traj -x 384 -y 29 -t 1 -m 2 -g -D1 -q -0.614225:-0.651670:-0.000881 trajg
+bart traj -x 384 -y 29 -t 1 -m 2 -g -D -q -0.614225:-0.651670:-0.000881 trajg
     # oversampling
 bart scale 2 trajg trajg_os
 
@@ -70,9 +70,9 @@ bart scale 0.03448275862 psfg_tmp psfg
 ###
 # SMS-NLINV
 ###
-bart nlinv -H1 -f 0.5 -i 10 -n1 -p psfa ka_grid reco_a_tmp
-bart nlinv -H1 -f 0.5 -i 10 -n1 -p psft kt_grid reco_t_tmp
-bart nlinv -H1 -f 0.5 -i 10 -n1 -p psfg kg_grid reco_g_tmp
+bart nlinv -i 10 -p psfa ka_grid reco_a_tmp
+bart nlinv -i 10 -p psft kt_grid reco_t_tmp
+bart nlinv -i 10 -p psfg kg_grid reco_g_tmp
 bart resize -c 0 192 1 192 reco_a_tmp MB2_aligned_SP29
 bart resize -c 0 192 1 192 reco_t_tmp MB2_turn_SP29
 bart resize -c 0 192 1 192 reco_g_tmp MB2_ga_SP29

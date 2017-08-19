@@ -6,17 +6,17 @@ set -e
 ###
 # 69 spokes
     # aligned
-bart traj -x 384 -y 69 -t 1 -m 3 -l -D1 -q -0.614225:-0.651670:-0.000881 trajaM
+bart traj -x 384 -y 69 -t 1 -m 3 -l -D -q -0.614225:-0.651670:-0.000881 trajaM
     # oversampling
 bart scale 2 trajaM trajaM_os
 
     # turn-based
-bart traj -x 384 -y 69 -t 1 -m 3 -D1 -q -0.614225:-0.651670:-0.000881 trajtM
+bart traj -x 384 -y 69 -t 1 -m 3 -D -q -0.614225:-0.651670:-0.000881 trajtM
     # oversampling
 bart scale 2 trajtM trajtM_os
 
     # golden-angle
-bart traj -x 384 -y 69 -t 1 -m 3 -g -D1 -q -0.614225:-0.651670:-0.000881 trajgM
+bart traj -x 384 -y 69 -t 1 -m 3 -g -D -q -0.614225:-0.651670:-0.000881 trajgM
     # oversampling
 bart scale 2 trajgM trajgM_os
 
@@ -73,9 +73,9 @@ bart scale 0.01449275362 psfgM_tmp psfgM
 # SMS-NLINV
 ###
 # 69 spokes
-bart nlinv -H1 -f 0.5 -i 10 -n1 -p psfaM kaM_grid reco_aM_tmp
-bart nlinv -H1 -f 0.5 -i 10 -n1 -p psftM ktM_grid reco_tM_tmp
-bart nlinv -H1 -f 0.5 -i 10 -n1 -p psfgM kgM_grid reco_gM_tmp
+bart nlinv -i 10 -p psfaM kaM_grid reco_aM_tmp
+bart nlinv -i 10 -p psftM ktM_grid reco_tM_tmp
+bart nlinv -i 10 -p psfgM kgM_grid reco_gM_tmp
 bart resize -c 0 192 1 192 reco_aM_tmp MB3_aligned_SP69
 bart resize -c 0 192 1 192 reco_tM_tmp MB3_turn_SP69
 bart resize -c 0 192 1 192 reco_gM_tmp MB3_ga_SP69

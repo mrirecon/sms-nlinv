@@ -1,7 +1,7 @@
 #!/bin/sh
 
 # Gradient delay corrected trajectory
-bart traj -x 320 -y 7 -t 5 -m 2 -D 1 -q 0:0.5:0  traj_tmp
+bart traj -x 320 -y 7 -t 5 -m 2 -D -q 0:0.5:0  traj_tmp
     # oversampling
 bart scale 2 traj_tmp traj_os
     # join time-dimension of trajectory
@@ -29,7 +29,7 @@ bart scale 0.02857142857 psf_tmp psf
 
 
 # SMS-NLINV
-bart nlinv -H1 -f0.5 -n1 -i13 -p psf k_grid reco_tmp
+bart nlinv -i13 -p psf k_grid reco_tmp
 bart resize -c 0 160 1 160 reco_tmp Fig8
 
 # Tidy up

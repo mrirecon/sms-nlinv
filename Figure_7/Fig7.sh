@@ -6,7 +6,7 @@
 
 # Traj 
 
-bart traj -x 384 -y 39 -t 1 -m 5 -D1 -g trajt
+bart traj -x 384 -y 39 -t 1 -m 5 -D -g trajt
     # oversampling
 bart scale 2 trajt trajt_os
 
@@ -29,7 +29,7 @@ bart scale 0.02564102564 psft_tmp psft
 
 
 # SMS-NLINV
-DEBUG_LEVEL=5 bart nlinv -H1 -f0.5 -i 11 -n1 -p psft kt_grid reco_t_tmp sens_nlinv
+DEBUG_LEVEL=5 bart nlinv -i 11 -p psft kt_grid reco_t_tmp sens_nlinv
 
 bart resize -c 0 256 1 256 reco_t_tmp tmp_Fig7_smsnlinv
 bart transpose 0 1 tmp_Fig7_smsnlinv Fig7_smsnlinv
@@ -39,7 +39,7 @@ bart transpose 0 1 tmp_Fig7_smsnlinv Fig7_smsnlinv
 ###
 
 ## Trajectory
-bart traj -x 384 -y 39 -t 1 -m 5 -D1 -g traje
+bart traj -x 384 -y 39 -t 1 -m 5 -D -g traje
 
 ## Gridding
 bart nufft -d 384:384:1 -i traje kt3 nufft_ke

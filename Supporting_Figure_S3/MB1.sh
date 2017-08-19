@@ -6,7 +6,7 @@ set -e
 ###
 
 # 69 spokes
-bart traj -x 384 -y 69 -t 1 -m 1 -D1 -q -0.614225:-0.651670:-0.000881 trajM
+bart traj -x 384 -y 69 -t 1 -m 1 -D -q -0.614225:-0.651670:-0.000881 trajM
     # oversampling
 bart scale 2 trajM trajM_os
 
@@ -43,8 +43,8 @@ bart scale 0.01449275362 psfM_tmp psfM
 ###
 
 # 69 spokes 
-bart nlinv -H1 -f 0.5 -i 10 -n1 -p psfM km_gridM reco_m_tmpM
-bart nlinv -H1 -f 0.5 -i 10 -n1 -p psfM kp_gridM reco_p_tmpM
+bart nlinv -i 10 -p psfM km_gridM reco_m_tmpM
+bart nlinv -i 10 -p psfM kp_gridM reco_p_tmpM
 bart resize -c 0 192 1 192 reco_m_tmpM MB1_bottom_SP69
 bart resize -c 0 192 1 192 reco_p_tmpM MB1_top_SP69
 
