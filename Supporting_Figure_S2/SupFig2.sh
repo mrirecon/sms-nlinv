@@ -86,6 +86,6 @@ bart scale 1 tmp_k_diff k_diff
 bart join 4 MB3_turn_SP301 MB3_turn_SP29 im_diff im_recoMB3
 bart join 4 k_recoMB3_turn_SP301 k_recoMB3_turn_SP29 k_diff k_recoMB3
 
-rm reco*.cfl kt*.cfl traj*.cfl nufft*.cfl ones*.cfl psf*.cfl tmp*.cfl im_diff.cfl k_diff.cfl MB3_*.cfl k_recoMB3*.cfl
-rm reco*.hdr kt*.hdr traj*.hdr nufft*.hdr ones*.hdr psf*.hdr tmp*.hdr im_diff.hdr k_diff.hdr MB3_*.hdr k_recoMB3*.hdr
+rm reco*.cfl kt*.cfl traj*.cfl nufft*.cfl ones*.cfl psf*.cfl tmp*.cfl im_diff.cfl k_diff.cfl MB3_*.cfl k_recoMB3_*.cfl
+rm reco*.hdr kt*.hdr traj*.hdr nufft*.hdr ones*.hdr psf*.hdr tmp*.hdr im_diff.hdr k_diff.hdr MB3_*.hdr k_recoMB3_*.hdr
 
