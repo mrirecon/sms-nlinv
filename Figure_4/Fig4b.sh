@@ -85,7 +85,7 @@ bart rss 32 rec_SMSNLINV_usamp rec_SMSNLINV_usamp_rss
 # Subtract
 bart saxpy -- -1 rec_SMSNLINV_usamp_rss rec_SMSNLINV_full_rss diff_SMSNLINV
 # Scale for better visibility & Resize
-bart scale 5 diff_SMSNLINV diff_SMSNLINVx5 # scale for better visibility
+bart scale 5 diff_SMSNLINV diff_SMSNLINVx5
 bart resize -c 0 192 diff_SMSNLINVx5 diff_SMSNLINVx5_resize
 # Absolute value output
 bart rss 32 diff_SMSNLINVx5_resize diff_SMSNLINVx5_resize_out
