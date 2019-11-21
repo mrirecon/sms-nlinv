@@ -1,4 +1,12 @@
-#!/bin/sh
+#!/bin/bash
+set -e
+
+if [ ! -e $TOOLBOX_PATH/bart ] ; then
+	echo "\$TOOLBOX_PATH is not set correctly!" >&2
+	exit 1
+fi
+export PATH=$TOOLBOX_PATH:$PATH
+
 
 # Gradient delay corrected trajectory
 bart traj -x 320 -y 7 -t 5 -m 2 -D -q 0:0.5:0  traj_tmp
