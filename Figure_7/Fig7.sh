@@ -7,6 +7,10 @@ if [ ! -e $TOOLBOX_PATH/bart ] ; then
 fi
 export PATH=$TOOLBOX_PATH:$PATH
 
+NONCART_FLAG=""
+if bart version -t v0.6.00 ; then
+        NONCART_FLAG="-n"
+fi
 
 ###
 # SMS-NLINV
@@ -37,7 +41,7 @@ bart scale 0.02564102564 psft_tmp psft
 
 
 # SMS-NLINV
-DEBUG_LEVEL=5 bart nlinv -i 11 -p psft kt_grid reco_t_tmp sens_nlinv
+DEBUG_LEVEL=5 bart nlinv $NONCART_FLAG -i 11 -p psft kt_grid reco_t_tmp sens_nlinv
 
 bart resize -c 0 256 1 256 reco_t_tmp tmp_Fig7_smsnlinv
 bart transpose 0 1 tmp_Fig7_smsnlinv Fig7_smsnlinv

@@ -7,6 +7,10 @@ if [ ! -e $TOOLBOX_PATH/bart ] ; then
 fi
 export PATH=$TOOLBOX_PATH:$PATH
 
+NONCART_FLAG=""
+if bart version -t v0.6.00 ; then
+        NONCART_FLAG="-n"
+fi
 
 # Gradient delay corrected trajectory
 bart traj -x 320 -y 7 -t 5 -m 2 -D -q 0:0.5:0  traj_tmp
@@ -37,7 +41,7 @@ bart scale 0.02857142857 psf_tmp psf
 
 
 # SMS-NLINV
-bart nlinv -i13 -p psf k_grid reco_tmp
+bart nlinv $NONCART_FLAG -i13 -p psf k_grid reco_tmp
 bart resize -c 0 160 1 160 reco_tmp Fig8
 
 # Tidy up
