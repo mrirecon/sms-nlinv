@@ -7,6 +7,10 @@ if [ ! -e $TOOLBOX_PATH/bart ] ; then
 fi
 export PATH=$TOOLBOX_PATH:$PATH
 
+NONCART_FLAG=""
+if bart version -t v0.6.00 ; then
+        NONCART_FLAG="-n"
+fi
 
 ###
 # Trajectory
@@ -50,8 +54,8 @@ bart scale 0.01449275362 psfM_tmp psfM
 ###
 
 # 69 spokes 
-bart nlinv -i 10 -p psfM km_gridM reco_m_tmpM
-bart nlinv -i 10 -p psfM kp_gridM reco_p_tmpM
+bart nlinv $NONCART_FLAG -i 10 -p psfM km_gridM reco_m_tmpM
+bart nlinv $NONCART_FLAG -i 10 -p psfM kp_gridM reco_p_tmpM
 bart resize -c 0 192 1 192 reco_m_tmpM MB1_bottom_SP69
 bart resize -c 0 192 1 192 reco_p_tmpM MB1_top_SP69
 
