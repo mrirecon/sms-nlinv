@@ -1,4 +1,4 @@
-#!/usr/bin/env python
+#!/usr/bin/env python3
 # histogram for noise amplification evaluation
 
 import numpy as np

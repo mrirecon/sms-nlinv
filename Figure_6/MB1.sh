@@ -82,14 +82,14 @@ bart scale 0.03448275862 psf_tmp psf
 # SMS-NLINV
 ###
 # 301 spokes 
-bart nlinv -g $NONCART_FLAG -i 10 -p psfF km_gridF reco_m_tmpF
-bart nlinv -g $NONCART_FLAG -i 10 -p psfF kp_gridF reco_p_tmpF
+bart nlinv $NONCART_FLAG -i 10 -p psfF km_gridF reco_m_tmpF
+bart nlinv $NONCART_FLAG -i 10 -p psfF kp_gridF reco_p_tmpF
 bart resize -c 0 192 1 192 reco_m_tmpF MB1_bottom_SP301
 bart resize -c 0 192 1 192 reco_p_tmpF MB1_top_SP301
 
 # 29 spokes 
-bart nlinv -g $NONCART_FLAG -i 10 -p psf km_grid reco_m_tmp
-bart nlinv -g $NONCART_FLAG -i 10 -p psf kp_grid reco_p_tmp
+bart nlinv $NONCART_FLAG -i 10 -p psf km_grid reco_m_tmp
+bart nlinv $NONCART_FLAG -i 10 -p psf kp_grid reco_p_tmp
 bart resize -c 0 192 1 192 reco_m_tmp MB1_bottom_SP29
 bart resize -c 0 192 1 192 reco_p_tmp MB1_top_SP29
 

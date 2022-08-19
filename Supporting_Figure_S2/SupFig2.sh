@@ -72,11 +72,11 @@ bart scale 0.03448275862 psft_tmp psft
 # SMS-NLINV
 ###
 # 301 spokes
-bart nlinv $NONCART_FLAG -S -i 10 -p psftM ktM_grid reco_tM_tmp
+bart nlinv -d4 $NONCART_FLAG -S -i 10 -p psftM ktM_grid reco_tM_tmp
 bart resize -c 0 192 1 192 reco_tM_tmp tmp_MB3_turn_SP301
 
 # 29 spokes
-bart nlinv $NONCART_FLAG -S -i 10 -p psft kt_grid reco_t_tmp
+bart nlinv -d4 $NONCART_FLAG -S -i 10 -p psft kt_grid reco_t_tmp
 bart resize -c 0 192 1 192 reco_t_tmp MB3_turn_SP29
 
 ###

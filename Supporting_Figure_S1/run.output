@@ -1,0 +1,9 @@
+# These limits, are quite high. To investigate some non-determinism in bart, set
+# these to 0.0005
+MB1_bottom_SP29		0.005  CFL_NRMSE
+MB1_bottom_SP301	0.005  CFL_NRMSE
+MB1_top_SP29		0.005  CFL_NRMSE
+MB1_top_SP301		0.005  CFL_NRMSE
+MB2_aligned_SP29	0.005  CFL_NRMSE
+MB2_ga_SP29		0.005  CFL_NRMSE
+MB2_turn_SP29		0.005  CFL_NRMSE
