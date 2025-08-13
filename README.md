@@ -1,3 +1,9 @@
+**The main repository has moved to: https://gitlab.tugraz.at/ibi/mrirecon/papers/sms-nlinv**
+
+**Please check there for updates.**
+
+
+
 These scripts reproduce the experiments described in the article:
     
 S. Rosenzweig, H.C.M. Holme, R.N. Wilke, D. Voit, J. Frahm and M. Uecker.
